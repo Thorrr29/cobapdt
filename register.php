@@ -1,5 +1,5 @@
 <?php
-require_once '../config/db.php';
+require_once 'config/db.php';
 
 $error = $success = "";
 
@@ -34,7 +34,7 @@ if (isset($_GET['success'])) {
     $success = "Registrasi berhasil. Silakan login.";
 }
 
-include '../template/header.php';
+include 'template/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +74,7 @@ include '../template/header.php';
     </div>
 </div>
 
-<?php include '../template/footer.php'; ?>
+<?php include '/template/footer.php'; ?>
 </body>
 </html>
 

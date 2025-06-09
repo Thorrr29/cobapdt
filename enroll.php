@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once '../config/db.php';
-require_once '../function/auth.php';
+require_once 'config/db.php';
+require_once 'function/auth.php';
 
 require_login(); // Panggil fungsi dari auth.php
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include '../template/header.php';
+include 'template/header.php';
 ?>
 
 <div class="container mt-5">
@@ -39,4 +39,4 @@ include '../template/header.php';
     </form>
 </div>
 
-<?php include '../template/footer.php'; ?>
+<?php include 'template/footer.php'; ?>

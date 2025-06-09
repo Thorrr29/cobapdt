@@ -4,7 +4,7 @@ if (isset($_SESSION['user_id'])) {
     header("Location: dashboard.php");
     exit();
 }
-include '../template/header.php';
+include 'template/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -41,4 +41,4 @@ include '../template/header.php';
 
 </body>
 </html>
-<?php include '../template/footer.php'; ?>
+<?php include 'template/footer.php'; ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../config/db.php';
-include '../function/auth.php';
+include 'config/db.php';
+include 'function/auth.php';
 
 require_login();
 
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include '../template/header.php';
+include 'template/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +57,7 @@ include '../template/header.php';
   <button class="btn btn-warning">Bayar</button>
 </form>
 
-<?php include '../template/footer.php'; ?>
+<?php include 'template/footer.php'; ?>
 
 </body>
 </html>

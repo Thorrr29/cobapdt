@@ -1,7 +1,7 @@
 <?php 
 session_start();
-include '../function/auth.php'; 
-include '../template/header.php'; 
+include 'function/auth.php'; 
+include 'template/header.php'; 
 require_login()
 ?>
 
@@ -26,7 +26,7 @@ require_login()
   </div>
 </div>
 
-<?php include '../template/footer.php'; ?>
+<?php include 'template/footer.php'; ?>
 </body>
 </html>
 

@@ -3,8 +3,18 @@ session_start();
 include 'function/auth.php'; 
 require_login();
 
+// Include DB connection (using PDO)
+include 'config/db.php';
+
+// Fetch course with ID 1
+$course_id = 2424;
+$stmt = $pdo->prepare("SELECT * FROM courses WHERE id = ?");
+$stmt->execute([$course_id]);
+$course = $stmt->fetch(PDO::FETCH_ASSOC);
+
 include 'template/header.php';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
@@ -69,9 +79,6 @@ include 'template/header.php';
   </style>
 </head>
 <body>
-
-
-
 <div class="container">
   <h3 class="text-center text-white">Selamat datang di EduTrack</h3>
   <p class="lead text-center text-white">Silakan lihat kursus yang tersedia di bawah ini.</p>
@@ -81,8 +88,13 @@ include 'template/header.php';
       <div class="card p-3">
         <img src="ai.jpg" class="card-img-top" alt="AI">
         <div class="card-body">
-          <h5 class="card-title">Kursus AI (Artificial Intelligence)</h5>
-          <p class="card-text">Belajar dasar-dasar AI dengan proyek nyata.</p>
+        <?php if ($course): ?>
+        <h5 class="card-title"><?= htmlspecialchars($course['title']) ?></h5>
+        <p class="card-text">Belajar dasar-dasar <?= htmlspecialchars($course['title']) ?> dengan proyek nyata.</p>
+      <?php else: ?>
+        <h5 class="card-title text-danger">Kursus tidak ditemukan</h5>
+      <?php endif; ?>
+
 
           <div class="dropdown-container">
             <button class="btn btn-gradient-toggle w-100" onclick="toggleDropdown(this)">
@@ -90,7 +102,7 @@ include 'template/header.php';
             </button>
             <div class="dropdown-content-wrapper">
             <p>
-            <strong>ID KURSUS PAKET 1 BULAN : 24244</strong>
+            <strong>ID KURSUS PAKET 1 BULAN : <?= htmlspecialchars($course_id) ?></strong>
             </p>
               <p class="mt-3">Kursus <strong>Artificial Intelligence (AI)</strong> ini dirancang untuk pemula yang ingin memahami konsep dasar dan praktik langsung pengembangan sistem cerdas. Selama <strong>1 bulan</strong>, peserta akan mempelajari:</p>
               <ul>

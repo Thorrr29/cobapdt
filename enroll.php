@@ -4,11 +4,19 @@ require_once 'config/db.php';
 require_once 'function/auth.php';
 
 require_login();
-$course_id = $_POST['course_id'] ?? $_GET['course_id'] ?? ''; // ini aman untuk awal
+
+// Fetch course ID 1 (as default)
+$course_id = 2424;
+$stmt = $pdo->prepare("SELECT * FROM courses WHERE id = ?");
+$stmt->execute([$course_id]);
+$course = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$course) {
+    die("Kursus tidak ditemukan.");
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_SESSION['user_id'];
-    $course_id = $_POST['course_id'];
     $name = $_POST['name'];
     $no_hp = $_POST['no_hp'];
 
@@ -22,10 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-
-
 include 'template/header.php';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
@@ -39,7 +46,7 @@ include 'template/header.php';
 
   <style>
     html, body {
-      height: 100%;
+      height: 110vh;
       margin: 0;
       padding: 0;
       display: flex;
@@ -48,6 +55,7 @@ include 'template/header.php';
 
     body {
       background: linear-gradient(135deg, rgb(116, 102, 236), rgb(126, 173, 204), rgb(209, 191, 209), #E96AE7, #796CFF);
+      
     }
 
     main {
@@ -108,10 +116,12 @@ include 'template/header.php';
     <?php endif; ?>
 
     <form method="POST">
-      <div class="mb-3">
+    
+    <div class="mb-3">
         <label for="course_id" class="form-label">ID Kursus</label>
-       <input id="course_id" name="course_id" class="form-control" value="<?= htmlspecialchars($course_id) ?>" readonly required>
-      </div>
+        <input type="text" id="course_id" class="form-control" value="<?= $course_id ?>" readonly>
+        <input type="hidden" name="course_id" value="<?= $course_id ?>">
+    </div>
       <div class="mb-3">
         <label for="name" class="form-label">Nama</label>
         <input id="name" name="name" class="form-control" required>

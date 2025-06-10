@@ -10,4 +10,7 @@ ALTER TABLE payments
 ADD CONSTRAINT fk_payments_enrollment
 FOREIGN KEY (enrollment_id) REFERENCES enrollments(id);
 
+ALTER TABLE enrollments
+ADD COLUMN name VARCHAR(20),
+ADD COLUMN no_hp VARCHAR(18);
 

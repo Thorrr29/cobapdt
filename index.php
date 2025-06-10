@@ -16,7 +16,7 @@ include 'template/header.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="height: 100vh;">
     <div class="col-md-4">
         <h4 class="text-center mb-3">Login ke EduTrack</h4>
         <?php if (isset($_GET['error'])): ?>

@@ -14,3 +14,6 @@ ALTER TABLE enrollments
 ADD COLUMN name VARCHAR(20),
 ADD COLUMN no_hp VARCHAR(18);
 
+INSERT INTO courses (title)
+VALUES ('Kursus Artificial Intelligence');
+

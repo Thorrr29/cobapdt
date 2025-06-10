@@ -23,10 +23,6 @@ if ($submitted) {
             $stmt1 = $pdo->prepare("INSERT INTO payments (enrollment_id, amount) VALUES (?, ?)");
             $stmt1->execute([$enrollment_id, $amount]);
 
-            // Update status pendaftaran
-            $stmt2 = $pdo->prepare("UPDATE enrollments SET status = 'paid' WHERE id = ?");
-            $stmt2->execute([$enrollment_id]);
-
             $pdo->commit();
             $success = "Pembayaran berhasil untuk ID Pembayaran <strong>$enrollment_id</strong>.";
         } catch (Exception $e) {

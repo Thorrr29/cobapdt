@@ -86,7 +86,7 @@ include 'template/header.php';
   <div class="row justify-content-center mt-4">
     <div class="col-md-6">
       <div class="card p-3">
-        <img src="ai.jpg" class="card-img-top" alt="AI">
+        <img src="src/ai.jpg" class="card-img-top" alt="AI">
         <div class="card-body">
         <?php if ($course): ?>
         <h5 class="card-title"><?= htmlspecialchars($course['title']) ?></h5>

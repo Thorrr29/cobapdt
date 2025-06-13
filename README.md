@@ -21,12 +21,15 @@ Querry :
 Querry : 
 
 ![Screenshot 2025-06-13 205727](https://github.com/user-attachments/assets/b9550f68-67f0-4711-ac03-23157257baaa)
-![image](https://github.com/user-attachments/assets/e4d321a1-7f27-464e-a573-42c03b25a315)
+
 Trigger akan mengubah status pada tabel enrollment lalu akan menampilkan status yang sudah di update pada web
+![image](https://github.com/user-attachments/assets/e4d321a1-7f27-464e-a573-42c03b25a315)
 ![image](https://github.com/user-attachments/assets/f53a7e22-cfae-445d-83d8-753c3152ae39)
 
 
 ## Transaction
+![image](https://github.com/user-attachments/assets/e3610dd3-08f4-416e-8080-4415cbeebea1)
+Dalam sistem pemesanan kursus online ini, prinsip transaksi juga sangat penting seperti halnya di sistem perbankan. Misalnya, saat pengguna melakukan pembayaran untuk mendaftar ke sebuah kursus, prosesnya tidak hanya mencatat nominal pembayaran, tetapi juga memverifikasi status pendaftaran dan memastikan bahwa pembayaran belum dilakukan sebelumnya. Proses ini dibungkus dalam beginTransaction() dan commit() untuk menjamin bahwa semua langkah berjalan tuntas. Jika terjadi masalah, seperti data pembayaran gagal disimpan atau kursus sudah dibayar sebelumnya, maka rollback() akan dijalankan untuk membatalkan seluruh proses. Dengan begitu, sistem mencegah kondisi tidak konsisten, seperti pembayaran tercatat tetapi status kursus tetap belum aktif.
 
 ## Stored Function
 Querry:
@@ -56,6 +59,7 @@ Lalu dilakukan juga TASK SCHEDULER agar backup dapat dilakukan secara otomatis b
 Kode:
 
 ![image](https://github.com/user-attachments/assets/58b77b55-3f72-4fe0-b38c-160cdb27d1be)
+
 Hasil backup Otomatis: 
 
 ![Screenshot 2025-06-14 025645](https://github.com/user-attachments/assets/86391765-ab5a-49d5-bd9e-804421d98e81)

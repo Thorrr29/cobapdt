@@ -4,8 +4,6 @@
 
 Edutrack ini merupaka sebuah aplikasi sistem pemesanan kursus online sederhana yang dibuat dengan menggunakan PHP dan MySQL. Tujuannya adalah untuk melihat kursus yang ada dan mendaftar kursus lalu membayarnya dengan aman dan terstruktur, dengan menerapkan stored procedure, trigger, transaction, dan stored function. Sistem ini juga dilengkapi dengan mekanisme backup otomatis untuk menjaga keamanan data pengguna jika terjadi sebuah kesalahan sistem.
 
-![Home](src/home.png)
-
 # Detail Konsep
 
 ## Stored Procedure

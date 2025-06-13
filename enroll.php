@@ -46,7 +46,7 @@ include 'template/header.php';
 
   <style>
     html, body {
-      height: 110vh;
+      height: 100vh;
       margin: 0;
       padding: 0;
       display: flex;
@@ -55,6 +55,7 @@ include 'template/header.php';
 
     body {
       background: linear-gradient(135deg, rgb(116, 102, 236), rgb(126, 173, 204), rgb(209, 191, 209), #E96AE7, #796CFF);
+      height: 100vh;
       
     }
 

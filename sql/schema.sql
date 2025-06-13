@@ -5,7 +5,7 @@ CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50),
     password VARCHAR(100),
-    role ENUM('admin','student')
+    role ENUM('admin','student') NOT NULL DEFAULT 'student'
 );
 
 CREATE TABLE courses (

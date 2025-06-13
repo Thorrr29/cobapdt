@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include 'function/auth.php'; 
-require_login();
+require_role('student');
 
 // Include DB connection (using PDO)
 include 'config/db.php';
@@ -44,6 +44,7 @@ include 'template/header.php';
       font-weight: bold;
     }
 
+    
     .btn-gradient-toggle {
       background: linear-gradient(90deg, #6a11cb, #2575fc);
       color: white;

@@ -85,6 +85,19 @@ include 'template/header.php';
         padding-top: 70px; 
         height: 100vh;
       }
+      .custom-gradient-btn {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.custom-gradient-btn:hover {
+  filter: brightness(1.1);
+}
   </style>
 </head>
 <body class="bg-light py-5">
@@ -106,7 +119,7 @@ include 'template/header.php';
               <label for="amount" class="form-label">Jumlah Pembayaran</label>
               <input type="number" name="amount" id="amount" class="form-control" placeholder="50000" required>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Kirim Pembayaran</button>
+          <button type="submit" class="btn custom-gradient-btn w-100">Kirim Pembayaran</button>
       </form>
       <?php else: ?>
       <div class="alert alert-info">Form pembayaran telah dinonaktifkan karena Anda sudah membayar kursus ini.</div>

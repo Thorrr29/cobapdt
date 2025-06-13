@@ -88,7 +88,7 @@ include 'template/header.php';
     }
 
     .custom-gradient-btn {
-  background: linear-gradient(135deg, rgb(116, 102, 236), rgb(126, 173, 204), rgb(209, 191, 209), #E96AE7, #796CFF);
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
   color: white;
   border: none;
   padding: 0.75rem;

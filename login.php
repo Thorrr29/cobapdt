@@ -15,8 +15,12 @@ if ($user && password_verify($password, $user['password'])) {
     $_SESSION['username'] = $user['username'];
     $_SESSION['role'] = $user['role'];
 
-    // Redirect ke dashboard
-    header("Location: dashboard.php");
+    // Redirect berdasarkan role
+    if ($_SESSION['role'] === 'admin') {
+        header("Location: admin/index.php");
+    } else {
+        header("Location: dashboard.php");
+    }
     exit();
 } else {
     // Jika gagal login, kembali ke halaman login

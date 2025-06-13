@@ -38,7 +38,7 @@ include 'template/header.php';
     </div>
 </div>
 
-
+<?php include 'template/footer.php'; ?>
 </body>
 </html>
-<?php include 'template/footer.php'; ?>
+

@@ -47,6 +47,7 @@ Function TotalPaidByCourse untuk menghitung jumlah nominal uang yang telah dibay
 
 ## Backup Database
 Backup database pada sistem web ini berfungsi untuk melindungi data transaksi agar tidak hilang akibat kerusakan sistem, kesalahan pengguna, atau serangan siber. Dengan backup, data penting seperti riwayat pembayaran, informasi pengguna, dan status transaksi dapat dipulihkan jika terjadi kegagalan sistem, sehingga menjaga keandalan layanan dan keamanan pengguna. Pada sistem ini, admin yang akan melakukan backup secara berkala, namun juga ada Task Scheduler yang akan melakukan backup secara otomatis
+
 Querry:
 
 ![Screenshot 2025-06-14 024009](https://github.com/user-attachments/assets/6eb9b726-3f7b-4e71-be8d-3d54407e3682)
@@ -58,6 +59,7 @@ Hasil Backup Manual oleh Admin :
 
 
 Lalu dilakukan juga TASK SCHEDULER agar backup dapat dilakukan secara otomatis berdasarkan schedule yang sudah ditetapkan (Pada Projek ini Setiap Hari Pukul 00:00 WIB).
+
 Kode:
 
 ![image](https://github.com/user-attachments/assets/58b77b55-3f72-4fe0-b38c-160cdb27d1be)

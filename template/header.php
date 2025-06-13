@@ -38,6 +38,9 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
         <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="payment_history.php">Riwayat Transaksi</a>
+        </li>
       </ul>
     </div>
   </div>

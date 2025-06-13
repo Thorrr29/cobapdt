@@ -29,6 +29,7 @@ Trigger akan mengubah status pada tabel enrollment lalu akan menampilkan status 
 
 ## Transaction
 ![image](https://github.com/user-attachments/assets/e3610dd3-08f4-416e-8080-4415cbeebea1)
+
 Dalam sistem pemesanan kursus online ini, prinsip transaksi juga sangat penting seperti halnya di sistem perbankan. Misalnya, saat pengguna melakukan pembayaran untuk mendaftar ke sebuah kursus, prosesnya tidak hanya mencatat nominal pembayaran, tetapi juga memverifikasi status pendaftaran dan memastikan bahwa pembayaran belum dilakukan sebelumnya. Proses ini dibungkus dalam beginTransaction() dan commit() untuk menjamin bahwa semua langkah berjalan tuntas. Jika terjadi masalah, seperti data pembayaran gagal disimpan atau kursus sudah dibayar sebelumnya, maka rollback() akan dijalankan untuk membatalkan seluruh proses. Dengan begitu, sistem mencegah kondisi tidak konsisten, seperti pembayaran tercatat tetapi status kursus tetap belum aktif.
 
 ## Stored Function
@@ -37,6 +38,7 @@ Querry:
 ![Screenshot 2025-06-13 220938](https://github.com/user-attachments/assets/9bb5e7e4-14fe-4704-9f9b-df6b4876c36c)
 
 ![image](https://github.com/user-attachments/assets/93346451-eb95-48f5-a6e2-92234c08e6df)
+
 Function TotalPaidByCourse untuk menghitung jumlah nominal uang yang telah dibayar untuk kursus tertentu. Berikut adalah cara untuk menampilkan Riwayat Pembayaran dengan menggunakan CALL Function:
 
 ![image](https://github.com/user-attachments/assets/22b654a6-1732-4e80-802d-9c3fbb46f667)

@@ -61,7 +61,9 @@ if ($submitted && !$already_paid) {
             $status_display = ($status === 'paid') ? 'Sudah Dibayar' : ucfirst($status);
 
 
-            $success = "Pembayaran berhasil! Anda membayar sebesar <strong>Rp" . number_format($amount, 0, ',', '.') . "</strong>.<br>Status pendaftaran Anda: <strong>$status_display</strong>";
+            $success = "Pembayaran berhasil! Anda membayar sebesar <strong>Rp" 
+            . number_format($amount, 0, ',', '.') .
+             "</strong>.<br>Status pendaftaran Anda: <strong>$status_display</strong>";
         } catch (Exception $e) {
             $pdo->rollBack();
             $error = "Gagal memproses pembayaran: " . $e->getMessage();

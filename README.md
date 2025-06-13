@@ -1,1 +1,3 @@
-# cobapdt
+# edutrack
+
+![Home](src/home.png)

@@ -7,7 +7,7 @@ Edutrack ini merupaka sebuah aplikasi sistem pemesanan kursus online sederhana y
 # Detail Konsep
 
 ## Stored Procedure
-
+Stored procedure adalah sekumpulan perintah SQL yang disimpan di dalam database dan dapat dijalankan (dipanggil) berkali-kali. Dalam sistem (EduTrack), stored procedure digunakan untuk menangani proses seperti pendaftaran kursus, pembayaran, atau cek status kursus secara efisien dan aman.
 ![WhatsApp Image 2025-06-13 at 22 06 24_e91cea25](https://github.com/user-attachments/assets/d29b8186-ee74-4a45-a701-a45b128f3a1a)
 
 Querry : 
@@ -70,4 +70,11 @@ Hasil backup Otomatis:
 
 
 ## Relevansi dengan Pemrosesan Data Terdistribusi
+Sistem EduTrack dirancang dengan mempertimbangkan prinsip-prinsip dasar pemrosesan data terdistribusi, agar dapat melayani banyak pengguna secara serentak dan tetap menjaga keandalan sistem:
+
+- Konsistensi: Proses pendaftaran kursus, pembayaran, dan pengelolaan data dilakukan melalui stored procedure agar setiap transaksi memiliki aturan yang sama, terpusat di sisi database.
+
+- Reliabilitas: Pemanfaatan trigger dan transaction membantu sistem tetap berjalan aman dan benar, bahkan ketika terjadi interupsi jaringan atau kesalahan sistem.
+
+- Integritas: Karena logika aplikasi disimpan langsung di database, hasil dan validasi tetap konsisten meskipun diakses dari berbagai platform seperti web, API, atau panel admin.
 
